@@ -21,7 +21,9 @@ module EasyUpnp
         log_enabled: true,
         log_level: :error,
         call_options: {},
-        cookies: nil
+        cookies: nil,
+        ssl_verify_mode: :peer,
+        digest_auth: nil
       }
 
       def initialize(o = {}, &block)
@@ -56,7 +58,9 @@ module EasyUpnp
         @options.advanced_typecasting,
         @options.log_enabled,
         @options.log_level,
-        @options.cookies
+        @options.cookies,
+        @options.ssl_verify_mode,
+        @options.digest_auth
       )
 
       definition_xml = Nokogiri::XML(definition)

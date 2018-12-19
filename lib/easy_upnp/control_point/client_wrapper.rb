@@ -6,13 +6,17 @@ module EasyUpnp
                    advanced_typecasting,
                    log_enabled,
                    log_level,
-                   cookies)
+                   cookies,
+                   ssl_verify_mode,
+                   digest_auth)
 
       # For some reason was not able to pass these options in the config block
       # in Savon 2.11
       options = {
         log: log_enabled,
-        log_level: log_level
+        log_level: log_level,
+        ssl_verify_mode: ssl_verify_mode,
+        digest_auth: digest_auth
       }
 
       @client = Savon.client(options) do |c|
