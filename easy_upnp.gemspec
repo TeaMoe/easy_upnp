@@ -30,6 +30,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'nokogiri', '~> 1.8'
   gem.add_dependency 'nori', '~> 2.6'
   gem.add_dependency 'rubyntlm', '~> 0.3'
+  gem.add_dependency 'webrick'
 
   gem.required_ruby_version = '>= 2.1.0'
 
